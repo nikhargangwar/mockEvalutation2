@@ -1,15 +1,16 @@
 import axios from 'axios';
 import { ERROR_ROUTE } from '../../constants/routesPaths';
+import { BACKEND_URL } from '../../constants/apiEndPoints';
 
-const makeRequest = async ({ url, method, headers }, navigate, payload = {}) => {
+const makeRequest = async ({ url, method }, dynamicConfig, navigate) => {
   try {
-    const { data } = await axios({
-      method,
+    const response = await axios({
+      baseURL: BACKEND_URL,
       url,
-      payload,
-      headers,
+      method,
+      ...dynamicConfig,
     });
-    return data;
+    return response.data;
   } catch (e) {
     if (navigate) {
       const errorStatus = e.response?.status;

@@ -6,13 +6,40 @@ import GET_LIKES_DATA from '../../constants/likesEndPoint.json';
 import makeRequest from '../../utils/makeRequest';
 import greyHeartIcon from '../../assets/heart-gray.svg';
 import redHeartIcon from '../../assets/heart-red.svg';
+import { GET_SONG_DATA, LIKE_SONG } from '../../constants/apiEndPoints';
 
 function Card({ songdata }) {
   const [likeCount, setLikeCount] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
 
+  const clickHandler = () => {
+    if (isLiked) {
+      makeRequest(
+        LIKE_SONG(songdata.id),
+        {
+          headers: { authorization: 'Bearer QWlzaHdhcnlhIE4=' },
+          data: { like: false },
+        },
+      );
+      setIsLiked(!isLiked);
+      setLikeCount(likeCount - 1);
+    } else {
+      makeRequest(
+        LIKE_SONG(songdata.id),
+        {
+          headers: { authorization: 'Bearer QWlzaHdhcnlhIE4=' },
+          data: { like: true },
+        },
+      );
+      setIsLiked(!isLiked);
+      setLikeCount(likeCount + 1);
+    }
+  };
+
   useEffect(() => {
-    makeRequest({ ...GET_LIKES_DATA, url: `${GET_LIKES_DATA.url}/${songdata.id}/likes` })
+    makeRequest(GET_SONG_DATA(songdata.id), {
+      headers: { authorization: 'Bearer QWlzaHdhcnlhIE4=' },
+    })
       .then((response) => {
         setLikeCount(response.data.count);
         setIsLiked(response.data.like);
@@ -36,7 +63,11 @@ function Card({ songdata }) {
           </div>
         </div>
         <div className="liked-icon">
-          <h3>{likeCount}</h3>
+          <h3>
+            <button type="button" onClick={clickHandler}>
+              {likeCount}
+            </button>
+          </h3>
           {isLiked ? (<img src={redHeartIcon} alt="hearticon" />)
             : (<img src={greyHeartIcon} alt="hearticon" />)}
 

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import makeRequest from '../../utils/makeRequest/index';
 import AllSongs from '../AllSongs';
-import GET_SONGS_DATA from '../../constants/apiEndPoints.json';
+import { GET_SONGS_DATA } from '../../constants/apiEndPoints';
 import GenreSongs from '../GenreSongs';
 
 function MainBody() {
@@ -14,7 +14,11 @@ function MainBody() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    makeRequest(GET_SONGS_DATA, navigate, {})
+    makeRequest(
+      GET_SONGS_DATA(),
+      { headers: { authorization: 'Bearer QWlzaHdhcnlhIE4=' } },
+      navigate,
+    )
       .then((response) => {
         // console.log(response);
 
