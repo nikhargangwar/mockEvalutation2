@@ -24,6 +24,7 @@ function MainBody() {
         setError(e.message);
       });
   }, []);
+
   if (error) {
     return (
       <div className="blogDataError" data-testid="error">

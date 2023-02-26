@@ -19,6 +19,7 @@ function GenreSongs({ allSongsData }) {
         {
 
             allSongsData.data.map((songdata) => (
+
               <Card
                 key={songdata.id}
                 songdata={songdata}
