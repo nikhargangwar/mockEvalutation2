@@ -1,11 +1,12 @@
 .card{
     height: 200px;
     width: 200px;
-    border: 1px solid black;
     border-radius: 20px;
     margin-bottom: 15px;
-    
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+    background-color: rgb(199, 199, 199);
 }
+
 .card-image-wrapper{
     height: 78%;
     width: 80%;
@@ -45,6 +46,11 @@
 .card-heading{
     font-size: 20px;
     font-weight: 200;
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* truncate to 4 lines */
+  -webkit-line-clamp: 1;
 }
 
 .card-subheading{

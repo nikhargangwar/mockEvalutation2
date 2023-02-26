@@ -4,7 +4,7 @@ import Card from '../Card';
 import './GenreSpecificCardSongs.css';
 // import gridIcon from '../../assets/icon-grid.svg';
 
-function GenreSpecificCardSongs({ genre, allSongsData }) {
+function GenreSpecificCardSongs({ genre, allSongsData, genreImg }) {
   // console.log(allSongsData);
   const [category, setCategory] = useState([]);
 
@@ -15,9 +15,16 @@ function GenreSpecificCardSongs({ genre, allSongsData }) {
 
   return category ? (
 
-    <div>
+    <div className="genre-specific-space">
       <div className="genre-title">
-        {genre}
+        <div className="genre-image">
+          <img src={genreImg} alt="genreimg" />
+        </div>
+        <div className="genre-title-text">
+          <h2>{genre}</h2>
+
+        </div>
+
       </div>
       <div className="genre-cards">
         {

@@ -4,8 +4,12 @@
 import React, { useState, useEffect } from 'react';
 // import Card from '../Card';
 import './GenreSongs.css';
-import genreIcon from '../../assets/icon-genre.svg';
+import gridIcon from '../../assets/icon-grid.svg';
 import GenreSpecificCardSongs from '../GenreSpecificCardSongs';
+import GenreBollywood from '../../assets/genre-bollywood.png';
+import GenreCountry from '../../assets/genre-country.png';
+import GenrePop from '../../assets/genre-pop.png';
+import GenreRock from '../../assets/genre-rock.png';
 
 function GenreSongs({ allSongsData, setToggleClicked }) {
   // console.log(allSongsData);
@@ -13,6 +17,13 @@ function GenreSongs({ allSongsData, setToggleClicked }) {
     setToggleClicked(false);
   };
   const genreList = ['Pop', 'Country', 'Bollywood', 'Rock'];
+  const genreImages = {
+    Bollywood: GenreBollywood,
+    Country: GenreCountry,
+    Pop: GenrePop,
+    Rock: GenreRock,
+  };
+
   return (
     <div className="card-plus-title">
       <div className="card-space-title">
@@ -20,7 +31,7 @@ function GenreSongs({ allSongsData, setToggleClicked }) {
           genres
         </div>
         <div className="toggle-button">
-          <button type="button" onClick={toggleHandler}><img src={genreIcon} alt="toggle" /></button>
+          <button type="button" onClick={toggleHandler}><img src={gridIcon} alt="toggle" /></button>
 
         </div>
       </div>
@@ -30,6 +41,7 @@ function GenreSongs({ allSongsData, setToggleClicked }) {
             key={id}
             genre={genre}
             allSongsData={allSongsData}
+            genreImg={genreImages[genre]}
           />
         ))}
 

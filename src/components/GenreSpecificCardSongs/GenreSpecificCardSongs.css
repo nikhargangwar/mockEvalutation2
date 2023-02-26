@@ -1,0 +1,27 @@
+.genre-specific-space{
+    margin-bottom: 40px;
+}
+.genre-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.genre-image{
+    
+}
+
+.genre-title-text{
+    height: 50px;
+    width: 180px;
+    background-color: #436EAA;
+    border-radius: 50px;
+    color: white;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.genre-title-text h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
