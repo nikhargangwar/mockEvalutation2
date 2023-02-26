@@ -1,0 +1,33 @@
+.Mainbody{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sync-button-wrapper{
+    width: 600px;
+    /* border: 1px solid black; */
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    font-weight: 100;
+}
+
+
+.sync-text{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sync-button{
+    height: 40px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: #4C63AA ;
+    color:white;
+    margin-bottom: 20px;
+    border: none;
+}

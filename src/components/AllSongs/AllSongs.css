@@ -1,0 +1,21 @@
+.card-plus-title{
+    width: 80%;
+    margin-top: 0px;
+    margin: 0 auto;
+}
+
+.card-space-title{
+    
+}
+
+.title-text{
+    margin-top:20px ;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.card-space{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
