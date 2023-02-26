@@ -10,7 +10,7 @@ import GenreSongs from '../GenreSongs';
 function MainBody() {
   const [error, setError] = useState();
   const [allSongsData, setAllSongsData] = useState();
-  const [toggleClicked, setToggleCliced] = useState(false);
+  const [toggleClicked, setToggleClicked] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,9 +41,9 @@ function MainBody() {
   return allSongsData ? (
     <div className="main-body">
       <div className="grey-area">
-        {toggleClicked
-          ? (<AllSongs allSongsData={allSongsData} />)
-          : (<GenreSongs allSongsData={allSongsData} />)}
+        {!toggleClicked
+          ? (<AllSongs allSongsData={allSongsData} setToggleClicked={setToggleClicked} />)
+          : (<GenreSongs allSongsData={allSongsData} setToggleClicked={setToggleClicked} />)}
 
       </div>
     </div>

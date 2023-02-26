@@ -2,8 +2,11 @@
 import React from 'react';
 import Card from '../Card';
 import './AllSongs.css'
-function AllSongs({allSongsData}) {
- 
+import genreIcon from '../../assets/icon-genre.svg'
+function AllSongs({allSongsData,setToggleClicked}) {
+ const toggleHandler=()=>{
+  setToggleClicked(true)
+ }
   return (
     <div className="card-plus-title">
       <div className="card-space-title">
@@ -11,7 +14,7 @@ function AllSongs({allSongsData}) {
           all songs 
         </div>
         <div className="toggle-button">
-          <img src="my-app/assets/icon-genre.svg" alt="" />
+          <button onClick={toggleHandler}><img src={genreIcon} alt="toggle" /></button>
         </div>
       </div>
       <div className="card-space">

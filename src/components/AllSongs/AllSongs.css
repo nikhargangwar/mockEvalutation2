@@ -5,17 +5,30 @@
 }
 
 .card-space-title{
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .title-text{
-    margin-top:20px ;
-    font-size: 60px;
+    
+    font-size: 50px;
     font-weight: bolder;
+}
+.toggle-button button{
+   background-color: transparent;
+   border: none;
+}
+
+.genre-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card-space{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
