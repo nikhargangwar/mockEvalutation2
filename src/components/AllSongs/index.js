@@ -2,7 +2,9 @@
 import React from 'react';
 import Card from '../Card';
 import './AllSongs.css'
-import genreIcon from '../../assets/icon-genre.svg'
+import genreIcon from '../../assets/icon-genre.svg';
+import PropTypes from 'prop-types'
+
 function AllSongs({allSongsData,setToggleClicked}) {
  const toggleHandler=()=>{
   setToggleClicked(true)
@@ -34,4 +36,9 @@ function AllSongs({allSongsData,setToggleClicked}) {
   );
 }
 
+
+AllSongs.propTypes={
+  allSongsData:PropTypes.object,
+  setToggleClicked:PropTypes.func
+}
 export default AllSongs;

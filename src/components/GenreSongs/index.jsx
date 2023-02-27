@@ -1,9 +1,12 @@
+/* eslint-disable react/require-default-props */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 // import Card from '../Card';
 import './GenreSongs.css';
+import PropTypes from 'prop-types';
 import gridIcon from '../../assets/icon-grid.svg';
 import GenreSpecificCardSongs from '../GenreSpecificCardSongs';
 import GenreBollywood from '../../assets/genre-bollywood.png';
@@ -50,5 +53,11 @@ function GenreSongs({ allSongsData, setToggleClicked }) {
     </div>
   );
 }
+
+GenreSongs.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  allSongsData: PropTypes.object,
+  setToggleClicked: PropTypes.func,
+};
 
 export default GenreSongs;

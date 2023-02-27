@@ -3,8 +3,9 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Songs from './pages/Songs';
+import Error from './pages/Error';
 
-import { HOME_ROUTE, SONGS } from './constants/routesPaths';
+import { HOME_ROUTE, ERROR_ROUTE, SONGS } from './constants/routesPaths';
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
           path={SONGS}
           element={(
             <Songs />
+          )}
+        />
+        <Route
+          path={ERROR_ROUTE}
+          element={(
+            <Error />
           )}
         />
         {/* <Route path={`${ERROR_ROUTE}/:errorCode?`} element={<Error />} />

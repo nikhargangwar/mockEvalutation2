@@ -2,8 +2,10 @@
 import './MainBody.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import makeRequest from '../../utils/makeRequest/index';
 import AllSongs from '../AllSongs';
+
 import { GET_SONGS_DATA } from '../../constants/apiEndPoints';
 import GenreSongs from '../GenreSongs';
 

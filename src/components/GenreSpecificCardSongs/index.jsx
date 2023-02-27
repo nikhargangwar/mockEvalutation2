@@ -1,5 +1,7 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Card';
 import './GenreSpecificCardSongs.css';
 // import gridIcon from '../../assets/icon-grid.svg';
@@ -48,5 +50,11 @@ function GenreSpecificCardSongs({ genre, allSongsData, genreImg }) {
     </div>
   );
 }
+
+GenreSpecificCardSongs.propTypes = {
+  genre: PropTypes.string.isRequired,
+  allSongsData: PropTypes.object.isRequired,
+  genreImg: PropTypes.string.isRequired,
+};
 
 export default GenreSpecificCardSongs;

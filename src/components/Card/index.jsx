@@ -7,6 +7,7 @@ import makeRequest from '../../utils/makeRequest';
 import greyHeartIcon from '../../assets/heart-gray.svg';
 import redHeartIcon from '../../assets/heart-red.svg';
 import { GET_SONG_DATA, LIKE_SONG } from '../../constants/apiEndPoints';
+import PropTypes from 'prop-types'
 
 function Card({ id, songdata }) {
   const [likeCount, setLikeCount] = useState(0);
@@ -89,4 +90,11 @@ function Card({ id, songdata }) {
   );
 }
 
+Card.propTypes = {
+  id:PropTypes.number,
+  songdata:PropTypes.object
+}
+
 export default Card;
+
+
