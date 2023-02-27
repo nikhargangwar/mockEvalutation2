@@ -21,8 +21,9 @@ function AllSongs({allSongsData,setToggleClicked}) {
        
         {
             // console.log(allSongsData.data)
-            allSongsData.data.map((songdata) => 
+            allSongsData.data.map((songdata,id) => 
             <Card 
+            id = {id}
             key={songdata.id}
             songdata={songdata} 
             />)

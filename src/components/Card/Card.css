@@ -1,11 +1,20 @@
-.card{
+.grey-bakground{
     height: 200px;
     width: 200px;
     border-radius: 20px;
     margin-bottom: 15px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(213, 213, 213);
 }
+.dark-bakground{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+    background-color: rgb(157, 157, 157);
+}
+
 
 .card-image-wrapper{
     height: 78%;
@@ -81,4 +90,23 @@
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 300;
+}
+
+@media screen and (max-width: 600px){
+    .grey-bakground{
+        height: 18rem;
+        width: 18rem;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+        background-color: rgb(199, 199, 199);
+    }
+    .dark-bakground{
+        height: 18rem;
+        width: 18rem;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
+        background-color: rgb(157, 157, 157);
+    }
 }

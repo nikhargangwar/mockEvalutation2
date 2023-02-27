@@ -17,11 +17,14 @@
     border-radius: 50px;
     color: white;
     position: absolute;
-    margin-left: 100px;
+    margin-left: 60px;
 }
 
 .genre-title-text h2{
     display: flex;
     justify-content: center;
     margin-top: 10px;
+}
+.genre-cards{
+    gap:30px;
 }

@@ -8,17 +8,19 @@ import greyHeartIcon from '../../assets/heart-gray.svg';
 import redHeartIcon from '../../assets/heart-red.svg';
 import { GET_SONG_DATA, LIKE_SONG } from '../../constants/apiEndPoints';
 
-function Card({  songdata }) {
+function Card({ id, songdata }) {
   const [likeCount, setLikeCount] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
   // const [cardClass, setCardClass] = useState(false);
 
-  // let cardClass;
-  // if (key % 2 === 0) {
-  //   setCardClass('grey-bakground');
-  // } else {
-  //   setCardClass('dark-background');
-  // }
+  let cardClass;
+  if (id % 2 === 0) {
+    cardClass='grey-bakground';
+    // setCardClass('grey-bakground');
+  } else {
+    cardClass='dark-bakground';
+    // setCardClass('dark-background');
+  }
 
   const clickHandler = () => {
     if (isLiked) {
@@ -53,8 +55,10 @@ function Card({  songdata }) {
         setIsLiked(response.data.like);
       });
   }, []);
+
+  
   return (
-    <div className="card">
+    <div className={cardClass}>
       <div className="card-image-wrapper">
         <div className="card-image">
           <img src={songdata.imageUrl} alt="title" />

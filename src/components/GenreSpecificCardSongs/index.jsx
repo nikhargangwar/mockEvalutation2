@@ -28,9 +28,10 @@ function GenreSpecificCardSongs({ genre, allSongsData, genreImg }) {
       </div>
       <div className="genre-cards">
         {
-            category.map((songdata) => (
+            category.map((songdata, id) => (
 
               <Card
+                id={id}
                 key={songdata.id}
                 songdata={songdata}
               />
