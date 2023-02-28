@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SyncButton should render when mounted 1`] = `
+<div>
+  <div
+    class="Mainbody"
+  >
+    <div
+      class="sync-button-wrapper"
+    >
+      <div
+        class="sync-text"
+      >
+        :((
+        <br />
+        seems a bit empty in here...
+      </div>
+      <div>
+        <button
+          class="sync-button"
+          data-testid="sync-button"
+          type="button"
+        >
+          <h2>
+            sync
+          </h2>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

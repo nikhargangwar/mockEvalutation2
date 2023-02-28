@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should render when mounted 1`] = `
+<div>
+  <div
+    class="dark-bakground"
+    data-testid="testCard"
+  >
+    <div
+      class="card-image-wrapper"
+    >
+      <div
+        class="card-image"
+      >
+        <img
+          alt="title"
+          src="https://i.scdn.co/image/ab67616d0000b27386a8ab515de4b7aef28cd631"
+        />
+      </div>
+    </div>
+    <div
+      class="card-details"
+    >
+      <div
+        class="card-text"
+      >
+        <div
+          class="card-heading"
+        >
+          Lost
+        </div>
+        <div
+          class="card-subheading"
+        >
+          Maroon 5
+        </div>
+      </div>
+      <div
+        class="liked-icon"
+      >
+        <h3>
+          <button
+            type="button"
+          >
+            0
+          </button>
+        </h3>
+        <img
+          alt="hearticon"
+          src="heart-gray.svg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

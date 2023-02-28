@@ -50,8 +50,7 @@ function Card({ id, songdata }) {
   useEffect(() => {
     makeRequest(GET_SONG_DATA(songdata.id), {
       headers: { authorization: 'Bearer QWlzaHdhcnlhIE4=' },
-    })
-      .then((response) => {
+    }).then((response) => {
         setLikeCount(response.data.count);
         setIsLiked(response.data.like);
       });
@@ -59,7 +58,7 @@ function Card({ id, songdata }) {
 
   
   return (
-    <div className={cardClass}>
+    <div className={cardClass} data-testid="testCard">
       <div className="card-image-wrapper">
         <div className="card-image">
           <img src={songdata.imageUrl} alt="title" />
@@ -77,7 +76,7 @@ function Card({ id, songdata }) {
         </div>
         <div className="liked-icon">
           <h3>
-            <button type="button" onClick={clickHandler}>
+            <button type="button" ddata-testid="testButton" onClick={clickHandler}>
               {likeCount}
             </button>
           </h3>

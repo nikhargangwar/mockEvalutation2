@@ -22,7 +22,7 @@ function AllSongs({allSongsData,setToggleClicked}) {
       <div className="card-space">
        
         {
-            // console.log(allSongsData.data)
+             
             allSongsData.data.map((songdata,id) => 
             <Card 
             id = {id}
